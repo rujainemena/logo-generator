@@ -4,6 +4,7 @@ const Square = require("./lib/Square");
 const Triangle = require("./lib/Triangle");
 const inquirer = require("inquirer");
 const fs = require("fs");
+const { error } = require("console");
 
 inquirer.prompt([{
     type: "input",
@@ -29,16 +30,24 @@ inquirer.prompt([{
         circle.setText(response.text);
         circle.setTextColor(response.textColor);
         circle.setShapeColor(response.shapeColor);
-        // expect(shape.render()).toEqual('<circle cx="150" cy="100" r="80" fill="${this.shapeColor}" stroke-width="5"/>')
+        fs.writeFile("./examples/logo.svg", circle.render(), (err)=>{
+            console.log("Generated logo.svg");
+        })
     }else if (response.shape===Triangle) {
         const triangle = new Triangle();
         triangle.setText(response.text);
         triangle.setTextColor(response.textColor);
         triangle.setShapeColor(response.shapeColor);
+        fs.writeFile("./examples/logo.svg", triangle.render(), (err)=>{
+            console.log("Generated logo.svg");
+        })
     } else if (response.shape===Square) {
         const square = new Square();
         square.setText(response.text);
         square.setTextColor(response.textColor);
         square.setShapeColor(response.shapeColor);
+        fs.writeFile("./examples/logo.svg", square.render(), (err)=>{
+            console.log("Generated logo.svg");
+        })
     }
 });
