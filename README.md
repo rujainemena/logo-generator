@@ -4,7 +4,7 @@
 
 This project allows the user to generate a simple logo based off a series of questions from the command line. 
 
-![walkthrough-video](/examples/images/gif-video.gif)
+![walkthrough-video](/examples/images/walkthrough-video.gif)
 
 To learn about the usage of the application, visit the User Story and Acceptance Criteria.
 
