@@ -4,7 +4,6 @@ const Square = require("./lib/Square");
 const Triangle = require("./lib/Triangle");
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const { error }; = require("console");
 
 inquirer.prompt([{
     type: "input",
