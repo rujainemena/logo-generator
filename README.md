@@ -68,4 +68,4 @@ MIT License
 
 
 ## Tests
-Integrated terminal in VS Code was used to test the application for errors and success.
+Used [Jest](https://www.npmjs.com/package/jest) for running the unit tests.
